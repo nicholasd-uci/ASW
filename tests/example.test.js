@@ -1,9 +1,6 @@
-const { test, expect } = require("@jest/globals")
+const Character = require('../lib/Character.js')
 
-const greeting = () => {
-    return('Hello World!')
-}
-
-test(`Greeting must be "Hello World!"`, () => {
-    expect(greeting()).toBe('Hello World!')
+test('New character should be new instance of class', () => {
+    let character = new Character('John', 5, 5, 'sword')
+    expect(character).toBeInstanceOf(Character)
 })
